@@ -1,0 +1,180 @@
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒ Place global/project-level styles here
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+
+//  Apply hardware acceleration to every element
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+* {
+  //@include translate3d(0);
+}
+
+html {
+  height: 100%;
+  background: $color-bkgd;
+}
+
+body {
+  @include flex-container-display();
+  @include flex-container-flow(nowrap column);
+  height: 100vh; /* Avoid the IE 10-11 min-height issue. */
+  padding: $global-nav-height-62 0 0 0;
+}
+
+//  Text selection
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+::-moz-selection {
+  background-color: $color-blue-2;
+  color: $color-bkgd;
+}
+
+::selection {
+  background-color: $color-blue-2;
+  color: $color-bkgd;
+}
+
+//  Define HTML headings – <h1> to <h6>
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+h1 {
+  @include mobile {
+	font-size: 45px;
+	line-height: 45px;
+  }
+  @include tablet {
+	font-size: 45px;
+	line-height: 45px;
+  }
+}
+
+h2 {
+  font-size: 27px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 23px;
+}
+
+h5 {
+  font-size: 21px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+h2, h3, h4, h5, h6 {
+  color: $color-blue-1;
+}
+
+//  Define <em> (emphasized) & <strong> (important or strongly emphasized) tags
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+em {
+  padding: 0 3px 0 3px;
+  background: $color-blue-1;
+  font-style: italic;
+  color: white;
+}
+
+strong {
+  font-weight: bold;
+  color: $color-blue-1;
+}
+
+
+//  globalMainContent --- Gets applied to <main> element
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+.globalMainContent {
+  z-index: 1;
+  overflow-x: hidden;
+  padding: 0 $global-padding-size-1 $global-padding-size-1 $global-padding-size-1;
+  @include flex(1 0 auto); /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+
+  min-height: 45vh;
+}
+
+//  Global <footer> with <time>
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+footer {
+  display: block;
+  width: 100%;
+  padding: $global-padding-size-2 $global-padding-size-1 $global-padding-size-2 $global-padding-size-1;
+  background: $color-blue-1;
+  text-align: center;
+  @include flex(1);
+
+  time {
+	font-size: 12px;
+  }
+}
+
+
+//  ratio --- Apply to <img> elements to scale proportionately
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+.ratio {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+//  Global hyperlinks <a><buton>
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+
+.button {
+  border:0;
+  background:black;
+  color:white;
+  text-align:center;
+  text-decoration:none;
+  text-overflow:ellipsis;
+  text-transform:uppercase;
+  line-height:40px;
+  display:inline-block;
+  width:auto;
+  height:auto;
+  margin: 0;
+  padding:0 20px;
+  white-space:nowrap;
+  cursor:pointer;
+  outline:none;
+  overflow-x:hidden;
+  @include user-select();
+  position: relative;
+  
+  &.full-width {
+    display:block;
+  }
+  
+  &:link,
+  &:visited {
+       background: black;
+       color: white;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+       background: grey;
+       color: black;
+  }
+}
+
+//  Lists and list items
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+ul {
+  width: 100%;
+  list-style-type: none;
+  text-align: left;
+
+  li {
+	width: 100%;
+	height: $global-nav-height;
+  }
+}
+
+

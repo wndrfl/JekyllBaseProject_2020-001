@@ -1,0 +1,156 @@
+# JekyllBaseProject_2020-001 
+# Current GitHub Jekyll version support = 3.8.5
+# This is the global configuration file for JekyllBaseProject_2020-001.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+
+# ▒ Locations [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+source:           .
+destination:      build
+plugins_dir:      _plugins
+layouts_dir:      _layouts
+data_dir:         _data
+includes_dir:     _layoutPartials
+collections_dir:  _collections # New feature for Jekyll 3.7.0, now all collections are stored in this directory to cleanup the src directory
+#collections:
+ # yourFirstCollectionHere:
+  #  output: true # render a page for each document
+  # permalink: /linux/:path/
+
+sass:
+    sass_dir: _scssPartials
+    style: compressed
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Locations [end]
+
+# ▒ Handling & Reading [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+safe:         false
+include:      [".htaccess"]
+exclude:      ["README.md","node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/","Gem*","_ruby_vendor","_cmds"]
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+#markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Handling & Reading [end]
+
+# ▒ Filtering Content [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Filtering Content [end]
+
+# ▒ Plugins [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+whitelist: []
+# https://marktrapp.com/projects/jekyll-collapse-newlines/
+#plugins: ['jekyll/itafroma/collapse_newlines']
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Plugins [end]
+
+# ▒ Conversion [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Conversion [end]
+
+# ▒ Serving [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+show_dir_listing: false
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Serving [end]
+
+# ▒ Outputting [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+#permalink:     date
+paginate_path: /page:num
+timezone: America/Los_Angeles # "Pacific Time (US & Canada)" => "America/Los_Angeles"
+quiet:    false
+verbose:  true
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Outputting [end]
+
+# ▒ Global/Site-level Variables [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+url: &default_url http://JekyllBaseProject_2020-001.net
+urlStage: http://JekyllBaseProject_2020-001-dev.techkraft.net
+urlDev: http://127.0.0.1:4000
+urlAPI: https://JekyllBaseProject_2020-001-api.JekyllBaseProject_2020-001.net
+urlStageAPI: https://JekyllBaseProject_2020-001-api.JekyllBaseProject_2020-001.net
+urlDevAPI: http://127.0.0.1:3000
+name: &default_name JekyllBaseProject_2020-001
+title: &default_title JekyllBaseProject_2020-001
+meta:
+  title: *default_title
+  description: &default_description mySite is something.
+  keywords: &default_keywords mySite, is, something
+  author: &default_author Vincent V. Toscano
+  editor: &default_editor Vincent V. Toscano
+  publisher: *default_name
+  theme_color: &default_theme_color "#ffa500"
+  baseURL: &default_baseURL http://mySite.net
+  app_name: &default_app_name Global Application Name # Should not be adjusted per page - Windows 7: "[D]efines the name of the Pinned site application instance.
+  robots: noindex,nofollow # noindex,nofollow or index,follow
+  iconURL: &default_iconURL /assets/imgs/global/ # pinned sites customizations
+  configURL: *default_iconURL # pinned sites customizations (such as tile background, badge updates and notifications)
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Global Variables [end]
+
+# ▒ Page-level Variables [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      theme-color: ff3310
+  -
+    scope:
+      path: ""
+      type: "yourFirstCollectionHere" # a collection in your site
+    values:
+      layout: "articleStyle01"
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Page-level Variables [end]
+
+# ▒ Templating [begin]
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+liquid:
+  error_mode: warn
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Templating [end]
+
+# ▒ Markdown Processors [begin]
+# ▒ Kramdown CLI full set of options: https://kramdown.gettalong.org/options.html
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  input:          GFM
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   [lsquo,rsquo,ldquo,rdquo]
+  hard_wrap:      false
+  parse_block_html: true
+#  coderay_css:    class
+# ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+# ▒ Markdown Processors [end]

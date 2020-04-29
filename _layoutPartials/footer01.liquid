@@ -1,0 +1,5 @@
+{% capture time_now %}{{'now' }}{% endcapture %}
+<footer>
+	© <time itemprop="copyright" datetime="{{ '2017-01-01' | date_to_xmlschema }}">2016</time>-<time itemprop="copyright" datetime="{{ time_now | date_to_xmlschema }}">{{ 'now' | date: "%Y" }}</time>
+	<a href="/" title="Visit the landing page">{{site.name}}</a> All rights reserved.
+</footer>
