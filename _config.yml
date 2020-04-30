@@ -86,7 +86,7 @@ verbose:  true
 
 # ▒ Global/Site-level Variables [begin]
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-url: &default_url http://JekyllBaseProject_2020-001.net
+url: &default_url //vincentvtoscano.github.io/JekyllBaseProject_2020-001
 urlStage: http://JekyllBaseProject_2020-001-dev.techkraft.net
 urlDev: http://127.0.0.1:4000
 urlAPI: https://JekyllBaseProject_2020-001-api.JekyllBaseProject_2020-001.net
