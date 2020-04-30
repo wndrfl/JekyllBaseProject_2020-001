@@ -1,0 +1,28 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head01.liquid collection='legal' %}
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        {% include navigation/navGlobal.liquid %}
+        <main class="globalMainContent">
+
+            <div class="legal legal--style01">
+
+                <header class="legal__header">
+
+                    <h1 class="legal__h1">{{ page.headline }}</h1>
+                    <h2 class="legal__h2">{{ page.subheadline }}</h2><br>
+
+                </header>
+
+                {{ content }}
+
+            </div>
+        </main>
+        {% include footer01.liquid %}
+    </body>
+</html>

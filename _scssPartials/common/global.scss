@@ -38,34 +38,41 @@ body {
 //  Define HTML headings – <h1> to <h6>
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 h1 {
+  font-size: 45px;
+  line-height: 45px;
   @include mobile {
-	font-size: 45px;
-	line-height: 45px;
+	font-size: 40px;
+	line-height: 40px;
   }
   @include tablet {
-	font-size: 45px;
-	line-height: 45px;
+	font-size: 40px;
+	line-height: 40px;
   }
 }
 
 h2 {
   font-size: 27px;
+  line-height: 27px;
 }
 
 h3 {
   font-size: 25px;
+  line-height: 25px;
 }
 
 h4 {
   font-size: 23px;
+  line-height: 23px;
 }
 
 h5 {
-  font-size: 21px;
+  font-size: 22px;
+  line-height: 22px;
 }
 
 h6 {
-  font-size: 18px;
+  font-size: 21px;
+  line-height: 21px;
 }
 
 h2, h3, h4, h5, h6 {

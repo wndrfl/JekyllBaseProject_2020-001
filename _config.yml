@@ -15,10 +15,10 @@ layouts_dir:      _layouts
 data_dir:         _data
 includes_dir:     _layoutPartials
 collections_dir:  _collections # New feature for Jekyll 3.7.0, now all collections are stored in this directory to cleanup the src directory
-#collections:
- # yourFirstCollectionHere:
-  #  output: true # render a page for each document
-  # permalink: /linux/:path/
+collections:
+  legal:
+    output: true # render a page for each document
+    permalink: /legal/:path/
 
 sass:
     sass_dir: _scssPartials
@@ -120,9 +120,9 @@ defaults:
   -
     scope:
       path: ""
-      type: "yourFirstCollectionHere" # a collection in your site
+      type: "legal" # a collection in your site
     values:
-      layout: "articleStyle01"
+      layout: "legal01"
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 # ▒ Page-level Variables [end]
 

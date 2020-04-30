@@ -1,18 +1,30 @@
 ---
-<!--layout: compress-->
+title: &title Home
+headline: Home
+subheadline: Welcome to the Home Page
 ---
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		{% include head01.liquid %}
-		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 		{% include navigation/navGlobal.liquid %}
-		<main id="landing" class="globalMainContent">
+		<main class="globalMainContent">
 
-			Testing content
+			<div class="home home--style01">
 
+				<header class="home__header">
+
+					<h1 class="home__h1">{{ page.headline }}</h1>
+					<h2 class="home__h2">{{ page.subheadline }}</h2><br>
+
+				</header>
+
+				{{ content }}
+
+			</div>
 		</main>
 		{% include footer01.liquid %}
 	</body>
