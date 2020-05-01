@@ -115,7 +115,7 @@ meta:
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 defaults:
   - scope:
-      path: "" # an empty string here means all files in the project
+      path: "" # an empty string here means all files in the project; a wildcard
     values:
       theme-color: ff3310
   -
@@ -124,6 +124,11 @@ defaults:
       type: "legal" # a collection in your site
     values:
       layout: "legal01"
+  -
+    scope:
+      path: "404.md"
+    values:
+      layout: "http-status-codes01"
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 # ▒ Page-level Variables [end]
 

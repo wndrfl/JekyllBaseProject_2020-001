@@ -7,11 +7,20 @@
 	{% endif %}
 	{% capture var_canonical %}{{ env }}{{ page.url | append:' ' | replace:'/ ','' }}{% endcapture %}
 	{% capture var_timeNow %}{{ 'now' | date: "%Y" }}{% endcapture %}
-	{% capture var_title %}{% if page.meta.title %}{{ page.meta.title }} | {{ page.collection | capitalize }} | {{ site.meta.title }}{% elsif
+
+	{% if page.collection %}
+		{% assign var_collection = {{ page.collection | capitalize }} %}
+	{% else %}
+		{% capture var_collection %}
+			{{ include.collection | capitalize }}
+		{% endcapture %}
+	{% endif %}
+
+	{% capture var_title %}{% if page.meta.title %}{{ page.meta.title }} | {{ var_collection }} | {{ site.meta.title }}{% elsif
 		site.meta.title %}{{ site.meta.title }}{% endif %}{% endcapture %}
 	<meta charset="UTF-8">
 	{% comment %} Global metadata {% endcomment %}
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport"
 		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
-	<title>{{ var_title }}</title>
+	<title>{{ var_collection }}{{ var_title }}</title>

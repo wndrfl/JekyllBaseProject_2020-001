@@ -1,0 +1,29 @@
+---
+sitemap: ""
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include head01.liquid collection='http-status-codes' %}
+        <link rel="stylesheet" href="{{ env }}/css/main.css">
+    </head>
+    <body>
+        {% include navigation/navGlobal.liquid %}
+        <main class="mainContent">
+
+            <div class="http-status-codes http-status-codes--style01">
+
+                <header class="http-status-codes__header">
+
+                    <h1 class="http-status-codes__h1">{{ page.headline }}</h1>
+                    <h2 class="http-status-codes__h2">{{ page.subheadline }}</h2><br>
+
+                </header>
+
+                {{ content }}
+
+            </div>
+        </main>
+        {% include footer01.liquid %}
+    </body>
+</html>

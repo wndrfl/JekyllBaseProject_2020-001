@@ -28,3 +28,4 @@ sitemap:
   changefreq: monthly
   exclude: no
 ---
+Legal here
