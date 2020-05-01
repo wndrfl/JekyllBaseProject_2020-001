@@ -114,6 +114,42 @@ footer {
   }
 }
 
+.footer__button {
+  position: relative;
+  display:inline-block;
+  width:auto;
+  height:auto;
+  margin: 0;
+  padding:0 20px;
+  border:0;
+  outline:none;
+  background:black;
+  line-height:40px;
+  color:white;
+  overflow-x:hidden;
+  cursor:pointer;
+  text-align:center;
+  white-space:nowrap;
+  text-decoration:none;
+  text-transform:uppercase;
+  @include user-select();
+  text-overflow:ellipsis;
+
+
+  &:link,
+  &:visited {
+    background: $color-blue-1;
+    color: white;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: white;
+    color: $color-blue-1;
+  }
+}
+
 
 //  Apply to <img> elements to scale proportionately
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
@@ -150,7 +186,7 @@ footer {
   &.button--full-width {
     display:block;
   }
-  
+
   &:link,
   &:visited {
        background: black;

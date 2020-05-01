@@ -3,7 +3,12 @@
 	▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 {% endcomment %}
 <nav id="nav_desktop_click-enabled" class="navGlobal navGlobal--desktop">
-    desktop
+    <a href="{{env}}" class="navGlobal__button">Home</a>
+    <a href="{{env}}/404" class="navGlobal__button">404</a>
+    {% for page in site.legal %}
+        <a href="{{env}}{{page.url}}" class="navGlobal__button">{{page.title}}</a>
+    {% endfor %}
+    </ul>
 </nav>
 
 
@@ -13,5 +18,10 @@
 
 {% endcomment %}
 <nav id="nav_mobile_tablet_touch-enabled" class="navGlobal navGlobal--mobileTablet">
-    mobile
+    <a href="{{env}}" class="navGlobal__button">Home</a>
+    <a href="{{env}}/404" class="navGlobal__button">404</a>
+    {% for page in site.legal %}
+        <a href="{{env}}{{page.url}}" class="navGlobal__button">{{page.title}}</a>
+    {% endfor %}
+    </ul>
 </nav>

@@ -35,3 +35,50 @@
     display: none;
   }
 }
+
+
+.navGlobal__button {
+  position: relative;
+  display:inline-block;
+  width:auto;
+  height:auto;
+  margin: 0;
+  padding:0 20px;
+  border:0;
+  outline:none;
+  background:black;
+  line-height:$global-nav-height-desktop;
+  color:white;
+  overflow-x:hidden;
+  cursor:pointer;
+  text-align:center;
+  white-space:nowrap;
+  text-decoration:none;
+  text-transform:uppercase;
+  @include user-select();
+  text-overflow:ellipsis;
+
+  &.button--full-width {
+    display:block;
+  }
+
+  &:link,
+  &:visited {
+    background: transparent;
+    color: $color-bkgd;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    background: $color-bkgd;
+    color: $color-blue-1;
+  }
+
+  @include mobile{
+    line-height:$global-nav-height-mobile;
+  }
+  @include tablet{
+    line-height:$global-nav-height-mobile;
+  }
+}
