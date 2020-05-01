@@ -1,0 +1,37 @@
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+// ▒ Global Navigation
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+.navGlobal{
+  position: fixed;
+  z-index: 99999;
+  top:0;
+  left: 0;
+  width: 100%;
+  background: $color-blue-1;
+  @include flex(0 0 auto);
+}
+
+
+
+.navGlobal--desktop{
+  height: $global-nav-height-desktop;
+  @include mobile {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.navGlobal--mobileTablet{
+  height: $global-nav-height-mobile;
+  @include desktop {
+    display: none;
+  }
+  @include desktop-xl {
+    display: none;
+  }
+}
