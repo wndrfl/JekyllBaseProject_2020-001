@@ -1,48 +1,24 @@
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-// ▒ Global Navigation
+// ▒ http-status-codes
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-.navGlobal{
-  position: fixed;
-  z-index: 99999;
-  top:0;
-  left: 0;
-  width: 100%;
-  background: $color-blue-1;
-  @include flex(0 0 auto);
-}
 
 
-
-.navGlobal--desktop{
-  height: $global-nav-height-desktop;
-  @include mobile {
-    display: none;
-  }
-
-  @include tablet {
-    display: none;
-  }
-}
-
-.navGlobal--mobileTablet{
-  height: $global-nav-height-mobile;
-  @include desktop {
-    display: none;
-  }
-  @include desktop-xl {
-    display: none;
+.http-status-codes {
+  p:last-of-type {
+    margin: 0 0 15px 0;
   }
 }
 
 
-.navGlobal__button {
+.http-status-codes_button{
   position: relative;
   display:inline-block;
-  width:auto;
+  left: 50%;
+  min-width: 400px;
   height:auto;
-  margin: 0;
+  margin:0 auto;
   padding:0 20px;
   border:0;
   outline:none;
@@ -54,20 +30,14 @@
   text-align:center;
   white-space:nowrap;
   text-decoration:none;
-  text-transform:uppercase;
   @include user-select();
+  text-transform:uppercase;
   text-overflow:ellipsis;
+  @include translate3d(-50%);
 
-  &.button--full-width {
+  &.http-status-codes_button--full-width {
     display:block;
   }
 
-  @include setPseudoClasses(transparent, $color-bkgd, $color-blue-2, $color-bkgd);
-
-  @include mobile{
-    line-height:$global-nav-height-mobile;
-  }
-  @include tablet{
-    line-height:$global-nav-height-mobile;
-  }
+  @include setPseudoClasses($color-blue-2, $color-bkgd, $color-blue-1, $color-bkgd);
 }

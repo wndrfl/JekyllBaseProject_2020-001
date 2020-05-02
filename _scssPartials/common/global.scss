@@ -113,6 +113,9 @@ footer {
 	font-size: 12px;
   }
 }
+.footer__p{
+  margin: 0 0 15px 0;
+}
 
 .footer__button {
   position: relative;
@@ -123,9 +126,7 @@ footer {
   padding:0 20px;
   border:0;
   outline:none;
-  background:black;
   line-height:40px;
-  color:white;
   overflow-x:hidden;
   cursor:pointer;
   text-align:center;
@@ -135,18 +136,19 @@ footer {
   @include user-select();
   text-overflow:ellipsis;
 
+  @include setPseudoClasses($color-blue-1, $color-bkgd, $color-blue-2, $color-bkgd);
 
-  &:link,
-  &:visited {
-    background: $color-blue-1;
-    color: white;
+  &.footer__button--full-width {
+    display:block;
   }
 
-  &:active,
-  &:focus,
-  &:hover {
-    background: white;
-    color: $color-blue-1;
+  &.footer__button--copyright{
+    line-height:inherit;
+    padding: unset;
+    height: unset;
+    text-transform:unset;
+    overflow: unset;
+    @include setPseudoClasses(transparent, $color-gray-1, $color-blue-2, $color-bkgd);
   }
 }
 
@@ -161,7 +163,6 @@ footer {
 
 //  CTA’s, Buttons, Anchors/Hyperlinks
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-
 .button {
   position: relative;
   display:inline-block;

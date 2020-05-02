@@ -2,16 +2,17 @@
 {% capture present_year %}{{ 'now' | date: "%Y" }}{% endcapture %}
 {% capture start_year %}{{2020}}{% endcapture %}
 <footer>
-	©
-	{% if present_year > start_year %}<time itemprop="copyright" datetime="{{ '2020-01-01' | date_to_xmlschema }}">2020</time> -{% endif %}
-	<time itemprop="copyright" datetime="{{ time_now | date_to_xmlschema }}">{{ time_now | date: "%Y" }}</time>
-	<a href="{{env}}" title="Visit the landing page">{{site.name}}</a> All rights reserved.
+	<p class="footer__p">
+		©{% if present_year > start_year %}<time itemprop="copyright" datetime="{{ '2020-01-01' | date_to_xmlschema }}">2020</time> -{% endif %}
+		<time itemprop="copyright" datetime="{{ time_now | date_to_xmlschema }}">{{ time_now | date: "%Y" }}</time>
+		<a href="{{env}}" title="Visit the landing page" class="footer__button footer__button--copyright">{{site.name}}</a> All rights reserved.
+	</p>
 
 	<ul>
-		<li><a href="{{env}}" class="footer__button">Home</a></li>
-		<li><a href="{{env}}/404" class="footer__button">404</a></li>
+		<li><a href="{{env}}" class="footer__button footer__button--full-width">Home</a></li>
+		<li><a href="{{env}}/404" class="footer__button footer__button--full-width">404</a></li>
 		{% for page in site.legal %}
-			<li><a href="{{env}}{{page.url}}" class="footer__button">{{page.title}}</a></li>
+			<li><a href="{{env}}{{page.url}}" class="footer__button footer__button--full-width">{{page.title}}</a></li>
 		{% endfor %}
 	</ul>
 
