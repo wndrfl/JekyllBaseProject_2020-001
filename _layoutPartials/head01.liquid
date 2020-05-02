@@ -10,12 +10,10 @@
 
 	{% if page.collection %}
 		{% assign var_collection = page.collection | capitalize %}
-		{{ var_collection }}
 	{% else %}
 		{% capture var_collection %}
 			{{ include.collection | capitalize }}
 		{% endcapture %}
-		{{ var_collection }}
 	{% endif %}
 
 	{% capture var_title %}{% if page.meta.title %}{{ page.meta.title }} | {{ var_collection }} | {{ site.meta.title }}{% elsif
