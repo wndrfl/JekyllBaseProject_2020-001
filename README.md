@@ -41,7 +41,7 @@ Expected output:
 ### Install Jekyll (>= 3.8.5) and Bundler through RubyGems (Perform only once, not every project).
 ``gem install bundler``  
 ``cd /YOUR_PATH_TO_REPO/``  
-``bundle install``
+``bundle install --path _ruby_vendor/bundle``
 
 #### Check install
 ``
