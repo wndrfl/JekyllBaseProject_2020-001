@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-repository: wndrfl/JekyllBaseProject_2020-001-test.git
+repository: wndrfl/JekyllBaseProject_2020-001-test1.git
 
 # ▒ Locations [begin]
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
@@ -87,7 +87,7 @@ verbose:  true
 
 # ▒ Global/Site-level Variables [begin]
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-url: &default_url //wndrfl.github.io/JekyllBaseProject_2020-001-test
+url: &default_url //wndrfl.github.io/JekyllBaseProject_2020-001-test1
 urlStage: http://JekyllBaseProject_2020-001-stage.JekyllBaseProject_2020-001.net
 urlDev: http://127.0.0.1:4000
 urlAPI: https://JekyllBaseProject_2020-001-api.JekyllBaseProject_2020-001.net
