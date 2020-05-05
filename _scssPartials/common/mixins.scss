@@ -17,6 +17,7 @@
 
 // transitionMultiple --- Handle multiple CSS3 transitions in a single statement
 // @usage	.transitionMultiple(width .33s linear 0s, height .2s linear 0s);
+// /* property name | duration | timing function | delay */
 @mixin transitionMultiple($arguments...) {
   -webkit-transition: $arguments;
   -moz-transition: $arguments;
@@ -29,7 +30,6 @@
 // @usage	.setPseudoClasses($brown_1, darkolivegreen, rgba(1, 22, 36, 0.4), rgba(1, 22, 36, 0.99));
 @mixin setPseudoClasses($def_bkgd:darkgray, $def_color: #888888, $hover_bkgd: gray, $hover_color: black, $time_bkgd:.3s, $time_foreground:.3s) {
 
-  @include transitionMultiple(background-color $time_bkgd ease-in-out, color $time_foreground linear);
   color: $def_color;
   background: $def_bkgd;
 
@@ -47,11 +47,14 @@
   &:focus{
     color: $hover_color;
     background: $hover_bkgd;
+    // /* property name | duration | timing function | delay */
+    @include transitionMultiple(background-color $time_bkgd ease-out, color $time_foreground linear);
   }
 
   &:hover {
     color: $hover_color;
     background: $hover_bkgd;
+    @include transitionMultiple(background-color $time_bkgd ease-out, color $time_foreground linear);
   }
 
   &:active {

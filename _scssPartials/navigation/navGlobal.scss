@@ -9,7 +9,7 @@
   top:0;
   left: 0;
   width: 100%;
-  background: deeppink;
+  background: $color-white-1;
   @include flex(0 0 auto);
 }
 
@@ -46,9 +46,9 @@
   padding:0 20px;
   border:0;
   outline:none;
-  background:black;
+  background:transparent;
   line-height:$global-nav-height-desktop;
-  color:white;
+  color:$color-white-1;
   overflow-x:hidden;
   cursor:pointer;
   text-align:center;
@@ -62,7 +62,7 @@
     display:block;
   }
 
-  @include setPseudoClasses(transparent, $color-bkgd, $color-blue-2, $color-bkgd);
+  @include setPseudoClasses(transparent, $color-bkgd, $color-blue-2, $color-white-1, .3s);
 
   @include mobile{
     line-height:$global-nav-height-mobile;

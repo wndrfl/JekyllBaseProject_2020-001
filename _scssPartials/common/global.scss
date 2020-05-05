@@ -19,12 +19,12 @@ body {
 //  Text selection
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ::-moz-selection {
-  background-color: $color-blue-2;
+  background-color: $color-white-1;
   color: $color-bkgd;
 }
 
 ::selection {
-  background-color: $color-blue-2;
+  background-color: $color-white-1;
   color: $color-bkgd;
 }
 
@@ -34,6 +34,7 @@ h1 {
 
   font-size: 45px;
   line-height: 45px;
+  color: $color-white-1;
   @include mobile {
 	font-size: 40px;
 	line-height: 40px;
@@ -70,7 +71,7 @@ h6 {
 }
 
 h2, h3, h4, h5, h6 {
-  color: $color-blue-1;
+  color: $color-gray-1;
 }
 
 //  Define <em> (emphasized) & <strong> (important or strongly emphasized) tags
@@ -79,12 +80,12 @@ em {
   padding: 0 3px 0 3px;
   background: $color-blue-1;
   font-style: italic;
-  color: white;
+  color: $color-white-1;
 }
 
 strong {
   font-weight: bold;
-  color: $color-blue-1;
+  color: $color-white-1;
 }
 
 
@@ -105,7 +106,7 @@ strong {
   display: block;
   width: 100%;
   padding: $global-padding-size-2 $global-padding-size-1 $global-padding-size-2 $global-padding-size-1;
-  background: $color-blue-1;
+  background: $color-white-1;
   text-align: center;
   @include flex(1);
 
@@ -136,7 +137,7 @@ strong {
   @include user-select();
   text-overflow:ellipsis;
 
-  @include setPseudoClasses($color-blue-1, $color-bkgd, $color-blue-2, $color-bkgd);
+  @include setPseudoClasses(transparent, $color-blue-1, $color-blue-2, $color-white-1);
 
   &.footer__button--full-width {
     display:block;
@@ -148,7 +149,7 @@ strong {
     height: unset;
     text-transform:unset;
     overflow: unset;
-    @include setPseudoClasses(transparent, $color-gray-1, $color-blue-2, $color-bkgd);
+    @include setPseudoClasses(transparent, $color-bkgd, $color-blue-2, $color-bkgd);
   }
 }
 
@@ -163,6 +164,19 @@ strong {
 
 //  CTA’s, Buttons, Anchors/Hyperlinks
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+//a {
+//  text-decoration:none;
+//  &:link, &:visited, &.disabled, &[disabled] {
+//    color: transparent;
+//    background: transparent;
+//  }
+//
+//  &:focus, &:hover, &:active {
+//    color: transparent;
+//    background: transparent;
+//  }
+//}
+
 .button {
   position: relative;
   display:inline-block;

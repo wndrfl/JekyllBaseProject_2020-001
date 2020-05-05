@@ -5,8 +5,8 @@ subheadline: What’s covered in these policies
 permalink: /legal/privacy-policy/
 meta:
     title: *title
-    description: &description Description here.
-    keywords: &keywords keywords, here
+    description: &description Privacy Policy description here.
+    keywords: &keywords Privacy Policy keywords, here
     og:
         title: *title
         description: *description

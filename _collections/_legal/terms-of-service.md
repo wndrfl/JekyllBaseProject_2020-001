@@ -5,8 +5,8 @@ subheadline: What’s covered in these terms
 permalink: /legal/terms-of-service/
 meta:
     title: *title
-    description: &description Description here.
-    keywords: &keywords keywords, here
+    description: &description Terms of Service description here.
+    keywords: &keywords Terms of Service keywords, here
     og:
         title: *title
         description: *description

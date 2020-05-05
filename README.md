@@ -1,11 +1,11 @@
-[![Vincent V. Toscano](http://vflux.biz/assets/imgs/global/VincentVToscanoTM2015_300x300.png)](http://vflux.biz)
+[![Wonderful](https://wonderful.io/meta/safari-pinned-tab.svg)](https://wonderful.io/)
 
-# JekyllBaseProject_2020-001
+# bingie-www-teaser
 
 Static website that can be used as a scafoldding for marketing, trailer, or other static website needs. This project utilizes [Jekyll](https://jekyllrb.com) to generate pages based on layouts and layout partials. Additionally, it processes your SCSS files.
 
 ## Install
-#### Requirments:
+#### Requirements:
 - GNU/Linu, Unix, or macOS  
 - Ruby version 2.6.5 >  
 - RubyGems  

@@ -1,11 +1,11 @@
-# JekyllBaseProject_2020-001 
+# bingie-www-teaser 
 # Current GitHub Jekyll version support = 3.8.5
-# This is the global configuration file for JekyllBaseProject_2020-001.
+# This is the global configuration file for bingie-www-teaser.
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-repository: wndrfl/JekyllBaseProject_2020-001-test1.git
+repository: wndrfl/bingie-www-teaser.git
 
 # ▒ Locations [begin]
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
@@ -87,24 +87,24 @@ verbose:  true
 
 # ▒ Global/Site-level Variables [begin]
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-url: &default_url //wndrfl.github.io/JekyllBaseProject_2020-001-test1
-urlStage: http://JekyllBaseProject_2020-001-stage.JekyllBaseProject_2020-001.net
+url: &default_url //wndrfl.github.io/bingie-www-teaser
+urlStage: http://bingie-www-teaser-stage.bingie-www-teaser.net
 urlDev: http://127.0.0.1:4000
-urlAPI: https://JekyllBaseProject_2020-001-api.JekyllBaseProject_2020-001.net
-urlStageAPI: https://JekyllBaseProject_2020-001-api-stage.JekyllBaseProject_2020-001.net
+urlAPI: https://bingie-www-teaser-api.bingie-www-teaser.net
+urlStageAPI: https://bingie-www-teaser-api-stage.bingie-www-teaser.net
 urlDevAPI: http://127.0.0.1:3000
-name: &default_name JekyllBaseProject_2020-001
-title: &default_title JekyllBaseProject_2020-001
+name: &default_name Bingie™
+title: &default_title Bingie™
 meta:
   title: *default_title
-  description: &default_description mySite is something.
-  keywords: &default_keywords mySite, is, something
-  author: &default_author Vincent V. Toscano
-  editor: &default_editor Vincent V. Toscano
+  description: &default_description What should I watch next? What do you recommend? Bingie is the premier app to recommend TV Shows and Movies to your friends and family. Bingie it!
+  keywords: &default_keywords Bingie TV, Bingie, reco and TV show, recommend and movie, bingee, bingy, bingie a flic, Bingie™, What should I watch,
+  author: &default_author Wonderful Collective, LLC, https://wonderful.io
+  editor: &default_editor Wonderful Collective
   publisher: *default_name
-  theme_color: &default_theme_color "#ffa500"
-  baseURL: &default_baseURL http://mySite.net
-  app_name: &default_app_name Global Application Name # Should not be adjusted per page - Windows 7: "[D]efines the name of the Pinned site application instance.
+  theme_color: &default_theme_color "#153CDB"
+  baseURL: &default_baseURL https://bingie.tv
+  app_name: &default_app_name Bingie # Should not be adjusted per page - Windows 7: "[D]efines the name of the Pinned site application instance.
   robots: noindex,nofollow # noindex,nofollow or index,follow
   iconURL: &default_iconURL /assets/imgs/global/ # pinned sites customizations
   configURL: *default_iconURL # pinned sites customizations (such as tile background, badge updates and notifications)
@@ -117,7 +117,7 @@ defaults:
   - scope:
       path: "" # an empty string here means all files in the project; a wildcard
     values:
-      theme-color: ff3310
+      theme-color: 153CDB
   -
     scope:
       path: ""
