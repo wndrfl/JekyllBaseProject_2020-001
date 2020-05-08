@@ -16,6 +16,11 @@
 		{% endcapture %}
 	{% endif %}
 
+	{% assign min = 0 %}
+	{% assign max = 999 %}
+	{% assign diff = max | minus: min %}
+	{% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
+
 	{% capture var_title %}{% if page.meta.title %}{{ page.meta.title }} | {{ var_collection }} | {{ site.meta.title }}{% elsif
 		site.meta.title %}{{ site.meta.title }}{% endif %}{% endcapture %}
 	<meta charset="UTF-8">
@@ -36,3 +41,19 @@
 		<meta name="keywords" content="{{ site.meta.keywords }}">
 	{% endif %}
 	<title>{{ var_title }}</title>
+	<link rel="mask-icon" href="{{ env }}{{ site.meta.iconURL }}safari-pinned-tab.svg?v={{ randomNumber }}"
+		  color="{{ site.meta.theme_color }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ env }}{{ site.meta.iconURL }}apple-touch-icon-180x180.png?v={{ randomNumber }}">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{ env }}{{ site.meta.iconURL }}apple-touch-icon-152x152.png?v={{ randomNumber }}">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{ env }}{{ site.meta.iconURL }}apple-touch-icon-144x144.png?v={{ randomNumber }}">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ env }}{{ site.meta.iconURL }}apple-touch-icon-120x120.png?v={{ randomNumber }}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ site.meta.iconURL }}apple-touch-icon-114x114.png?v={{ randomNumber }}">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ env }}{{ site.meta.iconURL }}apple-touch-icon-76x76.png?v={{ randomNumber }}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ env }}{{ site.meta.iconURL }}apple-touch-icon-72x72.png?v={{ randomNumber }}">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{ env }}{{ site.meta.iconURL }}apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="{{ env }}{{ site.meta.iconURL }}apple-touch-icon-57x57.png">
+	<link rel="icon" type="image/png" href="{{ env }}{{ site.meta.iconURL }}android-chrome-192x192.png?v={{ randomNumber }}" sizes="192x192">
+	<link rel="icon" type="image/png" href="{{ env }}{{ site.meta.iconURL }}favicon-32x32.png?v={{ randomNumber }}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{ env }}{{ site.meta.iconURL }}favicon-16x16.png?v={{ randomNumber }}" sizes="16x16">
+	<link rel="manifest" href="{{ env }}{{ site.meta.iconURL }}manifest.json?v={{ randomNumber }}">
+	<link rel="shortcut icon" href="{{ env }}{{ site.meta.iconURL }}favicon.ico?v={{ randomNumber }}">

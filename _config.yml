@@ -93,16 +93,16 @@ urlDev: http://127.0.0.1:4000
 urlAPI: https://bingie-www-teaser-api.bingie-www-teaser.net
 urlStageAPI: https://bingie-www-teaser-api-stage.bingie-www-teaser.net
 urlDevAPI: http://127.0.0.1:3000
-name: &default_name Bingie™
-title: &default_title Bingie™
+name: &default_name Bingie
+title: &default_title Bingie
 meta:
   title: *default_title
   description: &default_description What should I watch next? What do you recommend? Bingie is the premier app to recommend TV Shows and Movies to your friends and family. Bingie it!
-  keywords: &default_keywords Bingie TV, Bingie, reco and TV show, recommend and movie, bingee, bingy, bingie a flic, Bingie™, What should I watch,
+  keywords: &default_keywords Bingie TV, Bingie, bingee, reco and TV show, recommend and movie, bingy, bingie a flic, What should I watch,
   author: &default_author Wonderful Collective, LLC, https://wonderful.io
   editor: &default_editor Wonderful Collective
   publisher: *default_name
-  theme_color: &default_theme_color "#153CDB"
+  theme_color: &default_theme_color "#006aff"
   baseURL: &default_baseURL https://bingie.tv
   app_name: &default_app_name Bingie # Should not be adjusted per page - Windows 7: "[D]efines the name of the Pinned site application instance.
   robots: noindex,nofollow # noindex,nofollow or index,follow
