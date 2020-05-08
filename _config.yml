@@ -108,6 +108,44 @@ meta:
   robots: noindex,nofollow # noindex,nofollow or index,follow
   iconURL: &default_iconURL /assets/imgs/global/ # pinned sites customizations
   configURL: *default_iconURL # pinned sites customizations (such as tile background, badge updates and notifications)
+  og: # Open Graph Stories
+    id: 12398123-98234 # Open Graph or Facebook App ID
+    locale: en_US
+    url: *default_url
+    title: *default_title
+    description: *default_description
+    site_name: *default_name
+    type: website # ▒▒▒▒▒▒ website article book ▒▒▒▒▒▒ https://developers.facebook.com/docs/reference/opengraph#object-type
+    image: /assets/imgs/share/Bingie_share_fb_20200508.png
+    image_type: image/png
+    image_width: 1200
+    image_height: 630
+    image_alt: *default_description
+    updated_time: 2020-01-02 # https://en.wikipedia.org/wiki/ISO_8601
+  twitter:  #https://dev.twitter.com/cards/types/summary-large-image
+    card: summary_large_image #Uses a large image, unlike plain summary
+    site: &twitter_username "@usernameNeeded" # @username for the website used in the card footer. [without the @]
+    creator: *twitter_username # @username for the content creator / author.
+    title: *default_title #A concise title for the related content
+    description: *default_description #A description that concisely summarizes the content as appropriate for presentation within a Tweet. You should not re-use the title as the description or use this field to describe the general services provided by the website.
+    image: /assets/imgs/global/android-chrome-512x512.png #be at least 280px in width, and at least 150px in height. Image must be less than 1MB in size
+    image_alt: *default_description
+  apple:
+    full_screen_mode: yes # Sets whether a web application runs in full-screen mode.
+    bar_style: black #Pushes content down and does not obstruct header content as black-translucent
+    app_title: *default_title #Sets the title of the application when added to the homescreen on iOS6+
+    pinned_tab_active_color: *default_theme_color
+  android:
+    manifest: *default_iconURL
+  msapplication:
+    navbutton-color: *default_theme_color # Back and Forward buttons in the Pinned Site browser window
+    square310x310logo: /assets/imgs/global/mstile-310x310.png # Specifies the image to use as the large tile, which is 310x310 pixels at 100% scaling.
+    TileColor: "#ffffff" # define the background color of a tile in Pinned Sites in Windows 8
+    TileImage: /assets/imgs/global/ # path to an image to be used as background for a tile in Pinned Sites in Windows 8. Tile images must be square PNGs 310px by 310px
+    window: width=1920;height=1080
+    starturl: *default_url
+    tooltip: *default_title # tooltip text that appears when you hover over the Pinned Site shortcut in the Windows Start menu or on the desktop
+    config: *default_iconURL # defines the path to a browser configuration (browserconfig.xml) file, letting you set pinned sites customizations (such as tile background, badge updates and notifications) with this external XML file rather than metadata within the HTML markup of webpages.
 # ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 # ▒ Global Variables [end]
 
