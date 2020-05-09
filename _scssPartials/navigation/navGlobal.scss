@@ -28,6 +28,7 @@
 
 .navGlobal--mobileTablet{
   height: $global-nav-height-mobile;
+  display: none; // hiding temporarily
   @include desktop {
     display: none;
   }
