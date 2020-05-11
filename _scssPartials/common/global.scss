@@ -120,7 +120,7 @@ strong {
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 .mainContent {
   z-index: 1;
-  min-height: 75vh;
+  min-height: 86vh;
   padding: 0 $global-padding-size-1 $global-padding-size-1 $global-padding-size-1;
   @include flex(1 0 auto); /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
 

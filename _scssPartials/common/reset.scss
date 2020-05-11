@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
  * @author:     Vincent V. Toscano
- * @version:    3.2
+ * @version:    3.3
  * @date:       9/01/12
  * @time:       1:59 PM
  * @updated:    1/3/20
@@ -42,6 +42,7 @@
 html, body {
   font: normal normal normal 10pt/normal "Helvetica Neue", Roboto, Arial, Helvetica, sans-serif;
   color: #9e9e9e;
+  scroll-behavior: smooth;
 }
 
 p, span, div, * {
