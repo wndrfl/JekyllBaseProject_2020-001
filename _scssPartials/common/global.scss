@@ -16,24 +16,24 @@ html {
 }
 
 @-webkit-keyframes blueTide {
-  0%{background-position:0% 51%}
+  0%{background-position:0 51%}
   50%{background-position:100% 50%}
-  100%{background-position:0% 51%}
+  100%{background-position:0 51%}
 }
 @-moz-keyframes blueTide {
-  0%{background-position:0% 51%}
+  0%{background-position:0 51%}
   50%{background-position:100% 50%}
-  100%{background-position:0% 51%}
+  100%{background-position:0 51%}
 }
 @-o-keyframes blueTide {
-  0%{background-position:0% 51%}
+  0%{background-position:0 51%}
   50%{background-position:100% 50%}
-  100%{background-position:0% 51%}
+  100%{background-position:0 51%}
 }
 @keyframes blueTide {
-  0%{background-position:0% 51%}
+  0%{background-position:0 51%}
   50%{background-position:100% 50%}
-  100%{background-position:0% 51%}
+  100%{background-position:0 51%}
 }
 
 body {
@@ -227,19 +227,6 @@ $button-take-me-to-the-top-radius:32px;
 
 //  CTA’s, Buttons, Anchors/Hyperlinks
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-//a {
-//  text-decoration:none;
-//  &:link, &:visited, &.disabled, &[disabled] {
-//    color: transparent;
-//    background: transparent;
-//  }
-//
-//  &:focus, &:hover, &:active {
-//    color: transparent;
-//    background: transparent;
-//  }
-//}
-
 .button {
   position: relative;
   display:inline-block;
@@ -294,88 +281,70 @@ ul {
 
 //  Font Styles
 // ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-.copy{
-  &.copy--giant{
 
-  }
-  &.copy--big{
 
-  }
-  &.copy__h1{
+//  Per each font face
+// ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 
-  }
-  &.copy__h2{
-
-  }
-  &.copy--subtitle{
-
-  }
-  &.copy__p{
-
-  }
-  &.copy__caption{
-
-  }
-  &.copy--tiny{
-
-  }
-  &.copy__label{
-
-  }
-
-  &.copy--overline{
-
-  }
-}
-//
 .roboto-lt {
-  &.--giant {
+
+  &--giant {
+    @include mobile {
+      font-size: 40px;
+    }
+    @include tablet {
+      font-size: 42px;
+    }
+    @include  desktop{
+      font-size: 88px;
+    }
 
   }
 
-  &.--big {
+  &--big {
 
   }
 }
+
 
 .roboto-med {
-  &.--h1 {
+  &--h1 {
 
   }
 
-  &.--h2 {
+  &--h2 {
 
   }
 
-  &.--h3 {
+  &--h3 {
 
   }
 
-  &.--label {
+  &--label {
 
   }
 }
 
 .roboto-reg {
-  &.--subtitle {
+  &--subtitle {
 
   }
 
-  &.--p {
+  &--p {
 
   }
 
-  &.--caption {
+  &--caption {
 
   }
 
-  &.--tiny {
+  &--tiny {
 
   }
 }
 
 .roboto-bold {
-  &.--overline {
+  &--overline {
 
   }
 }
